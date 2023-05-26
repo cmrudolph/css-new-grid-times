@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
-    <Link href={`/story/${id}`}>
+    <a href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
         <div>
@@ -11,19 +11,9 @@ const OpinionStory = ({ id, title, author, avatar }) => {
           <ArticleTitle>{title}</ArticleTitle>
         </div>
       </Wrapper>
-    </Link>
+    </a>
   );
 };
-
-const Link = styled.a`
-  &:not(:first-child) {
-    border-top: 2px solid var(--color-gray-300);
-    padding-top: 16px;
-  }
-  &:not(:last-child) {
-    padding-bottom: 16px;
-  }
-`;
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
