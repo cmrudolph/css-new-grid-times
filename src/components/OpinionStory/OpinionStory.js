@@ -19,6 +19,10 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+
+  @media (${QUERIES.tabletOnly}) {
+    width: 172px;
+  }
 `;
 
 const Avatar = styled.img`
